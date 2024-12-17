@@ -50,3 +50,80 @@ let randomNum = (max, min)=>{
     return Math.floor(Math.random() * (max-min+1)+min);// as math.random gives in 0 to 9 with decimals
 }
 console.log(randomNum(200,100));
+
+// higher order function(takes an array nd returns an array)
+const array1 = [1,2,3,4,5,9,8,6,4];
+const getsFiltered = (array1)=>{
+    return array1.filter(num=>num%2==0);
+}
+console.log("new even no filtered array is "+ getsFiltered(array1));
+
+//map methhod
+const doubledArr= array1.map(num=>{
+    return num*2
+    });
+console.log(doubledArr);
+console.log(array1);
+
+// find largest array using reduce()
+const arr2= [10,20,30,40,50,60,70];
+const largestNum = (arr)=>{
+    return arr.reduce((acc,current)=>{
+        return current > acc ? current : acc;
+    })
+}
+console.log("largest no is "+ largestNum(array1));
+
+// remove all the occurences of specified elements from an array
+const arr3= [1,2,3,4,5,5,6,7,8,8,9];
+const removeElements = (arr,target)=>{
+    return arr.filter(item=>item!==target);
+};
+console.log("new array after removing "+ removeElements(arr3,5));
+
+// Display Current Date and Time
+let date = new Date();
+console.log("current date and time is "+ date);
+console.log(date.toLocaleTimeString());
+
+//fix Error using try catch while api data calls
+async function FetchApiData(){
+    try{
+        let response =await fetch("https://jsonplaceholder.typicode.com/posts/1");
+        let daata=await response.json();
+        console.log(daata);
+    }
+    catch(errorrr){
+        console.error("error in fetching data "+errorrr);
+    }
+}
+
+FetchApiData();
+
+// recursion for finding factorial
+
+
+function factorial(n){ 
+    if(n==1){
+        return 1;
+    }
+    else{
+        return n * factorial(n-1);
+    }
+}
+console.log(factorial(5));
+
+// recursion for nth fibonaci
+
+function fibonacci(n){ 
+    if(n<=1){
+        return n;
+    }
+    else{
+        return fibonacci(n-1) + fibonacci(n-2);
+    }
+}
+console.log(fibonacci(10));
+
+// counter func that returns count on each call using closure
+
