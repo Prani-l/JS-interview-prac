@@ -35,15 +35,15 @@ let cars={
 cars.startEng = ()=> console.log("ready to go");
 
 //DOM manipulation of text on web page
-let para = document.querySelector("p");
-para.textContent = para.textContent + " text content <br> yesyeys yes yes";
-para.innerHTML = para.innerHTML + "<br> tag is used in inner html yesyeys yes yes";
+// let para = document.querySelector("p");
+// para.textContent = para.textContent + " text content <br> yesyeys yes yes";
+// para.innerHTML = para.innerHTML + "<br> tag is used in inner html yesyeys yes yes";
 
-// create button dynamically
-let parent = document.querySelector('#dynamicButton');
-let button = document.createElement('button');
-button.textContent = "button created!";
-parent.appendChild(button);
+// // create button dynamically
+// let parent = document.querySelector('#dynamicButton');
+// let button = document.createElement('button');
+// button.textContent = "button created!";
+// parent.appendChild(button);
 
 // radom no from max to min
 let randomNum = (max, min)=>{
@@ -127,3 +127,86 @@ console.log(fibonacci(10));
 
 // counter func that returns count on each call using closure
 
+// harkirat cohort
+
+
+// week-1 
+
+console.log("harkirat hello");
+
+let firstName = "harkirat";
+let age=18;
+let isMarried = false;
+console.log("hello "+firstName+" yashu di");
+if(isMarried) console.log(firstName + "is not aMarried");
+else console.log(firstName + " is a unmarried");
+
+for(let i=0; i<5; i++){
+    age++;
+}
+console.log(age);
+
+const personArray = ["1", "2", "4"];
+console.log(personArray[2]);
+
+for(let i=0;i<personArray.length;i++){
+    if(personArray[i]%2==0){
+        console.log(personArray[i]);
+    }
+}
+
+const alUsers = [{
+    name: "chalu pandey",
+    age: 11,
+},{
+    name: "amul goundi",
+    age: 22,
+}];
+
+console.log(alUsers[1].name)
+console.log(alUsers[1]["name"]);
+
+
+console.log(n)
+function sum22(a,b){
+    return a + b;
+}
+var n=6;
+let m=9;
+console.log(sum22(n,m))
+
+let sum44= (a,b) =>{
+    return a+b;
+}
+console.log(sum44(n,m));
+
+//call back function
+
+function display(a,b, summm){
+    let ans = summm(a,b)
+    return ans
+}
+
+function sum(a,b){
+    return a+b;
+}
+console.log(display(4,6,sum));
+
+// set time out 
+
+function fetchData(){
+    setTimeout(() =>{
+        console.log("data fetched")
+    }
+        ,5000);
+}
+console.log(fetchData()); 
+
+// string 
+
+function stringMethids(str, word){
+    console.log("the og string "+str )
+    console.log("length of string "+ str.indexOf(word));
+}
+
+stringMethids("hello mori maiya", "maiya");
